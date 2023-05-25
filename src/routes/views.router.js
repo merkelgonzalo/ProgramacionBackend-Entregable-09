@@ -121,13 +121,4 @@ router.get('/login', publicAcces, async (req,res)=>{
     res.render('login')
 });
 
-// router.get('/users', privateAcces, adminAcces, async (req,res)=>{
-//     const users = await userModel.find().lean();
-//     const user = req.session.user;
-
-//      res.render('users', {
-//         users, user
-//     }) 
-// })
-
 export default router;

@@ -1,11 +1,13 @@
 import { Router } from 'express';
 import {userModel} from '../Dao/models/users.model.js';
+import { createHash, validatePassword } from '../utils.js';
 
 const router = Router();
 
 router.post('/register', async (req, res) =>{
 
     const {first_name, last_name, email, age, password} = req.body;
+    
     try{
         const exist = await userModel.findOne({email});
     
@@ -18,7 +20,7 @@ router.post('/register', async (req, res) =>{
             last_name,
             email,
             age,
-            password,
+            password: createHash(password),
             rol: "user"
         };
     
