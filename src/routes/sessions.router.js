@@ -48,7 +48,9 @@ router.post('/login', async (req,res)=>{
                 rol: 'admin'
             };
         }else{
-            user = await userModel.findOne({email,password});
+            user = await userModel.findOne({email});
+            const isValidPassword = validatePassword(password,user);
+            if(!isValidPassword) return res.status(400).send({status:"error", error:"Invalid data"})
         }
 
         if(!user){
