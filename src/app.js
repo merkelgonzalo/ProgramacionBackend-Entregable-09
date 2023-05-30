@@ -9,6 +9,8 @@ import session from 'express-session';
 import productRouter from './routes/products.router.js';
 import cartRouter from './routes/carts.router.js';
 import sessionRouter from './routes/sessions.router.js';
+import passport from 'passport';
+import initializePassport from './config/passport.config.js';
 
 const DB = 'ecommerce';
 const MONGO = 'mongodb+srv://merkelgonzalo:dalemillo123@cluster0.a9rnj46.mongodb.net/' + DB;
@@ -27,6 +29,7 @@ app.use(session({
   resave:false,
   saveUninitialized:false
 }));
+initializePassport();
 
 /* const io = new Server(server); */
 
@@ -41,6 +44,9 @@ app.use('/', viewsRouter);
 app.use('/api/products', productRouter);
 app.use('/api/carts', cartRouter);
 app.use('/api/sessions', sessionRouter);
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 // io.on('connection', socket =>{
 //     console.log("New connected client")

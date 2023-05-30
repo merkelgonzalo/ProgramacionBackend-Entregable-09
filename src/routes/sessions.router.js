@@ -1,37 +1,18 @@
 import { Router } from 'express';
 import {userModel} from '../Dao/models/users.model.js';
 import { createHash, validatePassword } from '../utils.js';
+import passport from 'passport';
 
 const router = Router();
 
-router.post('/register', async (req, res) =>{
-
-    const {first_name, last_name, email, age, password} = req.body;
-    
-    try{
-        const exist = await userModel.findOne({email});
-    
-        if(exist || email === "adminCoder@coder.com"){
-            return res.status(400).send({status:"error", error:"User already exists"});
-        }
-    
-        const user = {
-            first_name,
-            last_name,
-            email,
-            age,
-            password: createHash(password),
-            rol: "user"
-        };
-    
-        const result = await userModel.create(user);
-        res.send({status:"succes", message:"User registered"});
-
-    }catch(error) {
-        console.log('Cannot register with mongoose: '+error)
-        res.status(500).send('Internal server error');
-    }
+router.post('/register', passport.authenticate('register', {failureREdirect:'/failregister'}), async (req, res) =>{
+    res.send({status:"success", message:"User registered"});
 });
+
+router.get('/failregister', async (req, res) => {
+    console.log("Failed strategy");
+    res.send({error:"Error ocurred when try to register"});
+})
 
 router.post('/login', async (req,res)=>{
     const { email, password } = req.body;

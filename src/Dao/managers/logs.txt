@@ -232,3 +232,12 @@ Date: 26/5/2023 - Hour: 20:50:09 - Method: Login
 Date: 26/5/2023 - Hour: 20:50:23 - Method: GET all products
 Date: 26/5/2023 - Hour: 20:50:51 - Method: GET all products
 Date: 26/5/2023 - Hour: 20:50:54 - Method: Login
+Date: 30/5/2023 - Hour: 17:45:47 - Method: GET all products
+Date: 30/5/2023 - Hour: 17:45:53 - Method: Register
+Date: 30/5/2023 - Hour: 17:48:57 - Method: Login
+Date: 30/5/2023 - Hour: 17:56:33 - Method: Register
+Date: 30/5/2023 - Hour: 17:56:56 - Method: Login
+Date: 30/5/2023 - Hour: 17:58:28 - Method: Register
+Date: 30/5/2023 - Hour: 17:59:33 - Method: Register
+Date: 30/5/2023 - Hour: 18:02:02 - Method: Register
+Date: 30/5/2023 - Hour: 18:05:10 - Method: Login
