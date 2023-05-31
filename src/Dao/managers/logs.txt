@@ -264,3 +264,7 @@ Date: 31/5/2023 - Hour: 16:53:21 - Method: GET all products
 Date: 31/5/2023 - Hour: 16:54:17 - Method: Login
 Date: 31/5/2023 - Hour: 16:58:59 - Method: Login
 Date: 31/5/2023 - Hour: 17:01:12 - Method: Login
+Date: 31/5/2023 - Hour: 17:13:46 - Method: GET all products
+Date: 31/5/2023 - Hour: 17:13:51 - Method: Login
+Date: 31/5/2023 - Hour: 17:13:58 - Method: GET all products
+Date: 31/5/2023 - Hour: 17:14:01 - Method: Login

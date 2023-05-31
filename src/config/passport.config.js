@@ -36,7 +36,18 @@ const initializePassport = () => {
     });
 
     passport.deserializeUser(async (id, done) => {
-        const user = await userService.findById(id);
+        if(id === 0){
+            const user = {
+                _id: 0, //A modo de prueba, teniendo en cuenta que ningun usuario va a tener ese ID, para serializar
+                first_name: 'Administrador',
+                last_name: 'Del Sistema',
+                email: email,
+                age: 99,
+                rol: 'admin'
+            };
+        }else{
+            const user = await userModel.findById(id);
+        }
         done(null, user)
     });
 
