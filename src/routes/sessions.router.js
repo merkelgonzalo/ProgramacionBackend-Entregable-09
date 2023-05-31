@@ -40,6 +40,13 @@ router.get('/logout', (req,res)=>{
         if(err) return res.status(500).send({status:"error", error:"Couldn't close session"});
         res.redirect('/login');
     })
-})
+});
+
+router.get('/github', passport.authenticate('github', {scope:['user:email']}), async (req,res)=>{});
+
+router.get('/githubcallback', passport.authenticate('github',{failureRedirect:'/login'}), async (req,res)=>{
+    req.session.user = req.user;
+    res.redirect('/')
+});
 
 export default router;
