@@ -241,3 +241,26 @@ Date: 30/5/2023 - Hour: 17:58:28 - Method: Register
 Date: 30/5/2023 - Hour: 17:59:33 - Method: Register
 Date: 30/5/2023 - Hour: 18:02:02 - Method: Register
 Date: 30/5/2023 - Hour: 18:05:10 - Method: Login
+Date: 31/5/2023 - Hour: 15:55:04 - Method: Login
+Date: 31/5/2023 - Hour: 16:00:42 - Method: Login
+Date: 31/5/2023 - Hour: 16:01:24 - Method: Login
+Date: 31/5/2023 - Hour: 16:02:47 - Method: Login
+Date: 31/5/2023 - Hour: 16:04:40 - Method: Login
+Date: 31/5/2023 - Hour: 16:07:30 - Method: Login
+Date: 31/5/2023 - Hour: 16:07:44 - Method: GET all products
+Date: 31/5/2023 - Hour: 16:21:08 - Method: GET all products
+Date: 31/5/2023 - Hour: 16:21:16 - Method: Login
+Date: 31/5/2023 - Hour: 16:21:52 - Method: Login
+Date: 31/5/2023 - Hour: 16:21:56 - Method: GET all products
+Date: 31/5/2023 - Hour: 16:23:09 - Method: Login
+Date: 31/5/2023 - Hour: 16:29:31 - Method: Login
+Date: 31/5/2023 - Hour: 16:47:33 - Method: Login
+Date: 31/5/2023 - Hour: 16:47:39 - Method: GET all products
+Date: 31/5/2023 - Hour: 16:47:45 - Method: Login
+Date: 31/5/2023 - Hour: 16:49:17 - Method: Login
+Date: 31/5/2023 - Hour: 16:51:22 - Method: Login
+Date: 31/5/2023 - Hour: 16:53:14 - Method: Login
+Date: 31/5/2023 - Hour: 16:53:21 - Method: GET all products
+Date: 31/5/2023 - Hour: 16:54:17 - Method: Login
+Date: 31/5/2023 - Hour: 16:58:59 - Method: Login
+Date: 31/5/2023 - Hour: 17:01:12 - Method: Login
