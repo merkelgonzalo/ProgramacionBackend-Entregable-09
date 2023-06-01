@@ -310,3 +310,18 @@ Date: 31/5/2023 - Hour: 20:56:29 - Method: GET all products
 Date: 31/5/2023 - Hour: 20:56:35 - Method: Login
 Date: 31/5/2023 - Hour: 20:56:41 - Method: GET all products
 Date: 31/5/2023 - Hour: 20:56:45 - Method: Login
+Date: 31/5/2023 - Hour: 21:00:40 - Method: GET all products
+Date: 31/5/2023 - Hour: 21:00:48 - Method: Login
+Date: 31/5/2023 - Hour: 21:17:37 - Method: Login
+Date: 31/5/2023 - Hour: 21:17:44 - Method: GET all products
+Date: 31/5/2023 - Hour: 21:17:49 - Method: Login
+Date: 31/5/2023 - Hour: 21:40:35 - Method: Login
+Date: 31/5/2023 - Hour: 21:41:08 - Method: GET all products
+Date: 31/5/2023 - Hour: 21:43:47 - Method: Login
+Date: 31/5/2023 - Hour: 21:44:40 - Method: Login
+Date: 31/5/2023 - Hour: 21:44:48 - Method: GET all products
+Date: 31/5/2023 - Hour: 21:46:35 - Method: Login
+Date: 31/5/2023 - Hour: 21:47:00 - Method: Login
+Date: 31/5/2023 - Hour: 21:47:08 - Method: GET all products
+Date: 31/5/2023 - Hour: 21:50:59 - Method: Login
+Date: 31/5/2023 - Hour: 21:54:46 - Method: GET all products

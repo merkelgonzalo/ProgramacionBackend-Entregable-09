@@ -55,7 +55,8 @@ const initializePassport = () => {
     passport.use('login', new LocalStrategy({usernameField:'email'}, async (email, password, done)=>{
 
         try {
-           let user;
+            let user;
+            console.log("Login de passport.config")
             if(email === "adminCoder@coder.com" && password === "adminCod3r123"){
                 user = {
                     _id: 0, //A modo de prueba, teniendo en cuenta que ningun usuario va a tener ese ID, para serializar
@@ -69,14 +70,16 @@ const initializePassport = () => {
             }else{
                 user = await userModel.findOne({email});
                 if(!user){
+                    console.log("El usuario no existe")
                     return done(null, false);
                 }else{
                     if(!validatePassword(password,user)) return done (null, false);
+                    console.log("Todo ok")
                     return done(null, user);
                 }
             }
         } catch (error) {
-            
+            console.log("Todo RE MAL")
             return done("Error ocurred when try to login: " + error);
             
         }
@@ -94,7 +97,12 @@ const initializePassport = () => {
             let user = await userModel.findOne({email: profile._json.email});
             
             if(!user){
-                const email = profile._json.email == null ?  profile._json.username : null;
+                let email;
+                if(profile._json.email != null){
+                    email = profile._json.email;
+                }else{
+                    email = 'Email not available';
+                }
                 const newUser = {
                         first_name: profile._json.name,
                         last_name:'',

@@ -15,7 +15,7 @@ router.get('/failregister', async (req, res) => {
 })
 
 router.post('/login', passport.authenticate('login',{failureRedirect:'/faillogin'}), async (req,res)=>{
-
+    console.log("Llegue al router bien")
     if(!req.user) return res.status(400).send({status:"error", error: 'Invalid credentials'});
 
     req.session.user = {
@@ -28,7 +28,7 @@ router.post('/login', passport.authenticate('login',{failureRedirect:'/faillogin
     res.send({status:"success", payload:req.user, message:"Login!!!"})
 });
 
-router.get('/faillogin', async (req,res)=>{
+router.get('/faillogin', async (req, res)=>{
 
     console.log('Failed strategy');
     res.send({error: 'Error ocurred when try to login...'});
