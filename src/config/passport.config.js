@@ -89,37 +89,39 @@ const initializePassport = () => {
     passport.use('github', new GitHubStrategy({
         clientID:'Iv1.c8cb33257e109698',
         clientSecret:'c0b80165c9c6e709bbb14fc4ced3dec306f23e43',
-        callbackURL: 'http://localhost:8080/api/sessions/githubcallback'
-        }, async (accesToken, refreshToken, profile, done)=>{
-        
-        try {    
-            console.log(profile);
-            let user = await userModel.findOne({email: profile._json.email});
-            
-            if(!user){
-                let email;
-                if(profile._json.email != null){
-                    email = profile._json.email;
+        callbackURL: 'http://localhost:8080/api/sessions/githubcallback',
+        scope: ["user:email"]
+        },
+        async (accesToken, refreshToken, profile, done)=>{
+            try {    
+                console.log(profile);
+                let user = await userModel.findOne({email: profile._json.email});
+                
+                if(!user){
+                    let email;
+                    if(profile._json.email != null){
+                        email = profile._json.email;
+                    }else{
+                        email = 'Email not available';
+                    }
+                    const newUser = {
+                            first_name: profile._json.name,
+                            last_name:'',
+                            email: email,
+                            age: 18,
+                            password: '',
+                            rol: 'user'
+                    }
+                    const result = await userModel.create(newUser);
+                    done(null, result);
                 }else{
-                    email = 'Email not available';
+                    done(null, user);
                 }
-                const newUser = {
-                        first_name: profile._json.name,
-                        last_name:'',
-                        email: email,
-                        age: 18,
-                        password: '',
-                        rol: 'user'
-                }
-                const result = await userModel.create(newUser);
-                done(null, result);
-            }else{
-                done(null, user);
+            } catch (error) {
+                return done(null, error);
             }
-        } catch (error) {
-            return done(null, error);
         }
-    }));
+    ));
 }
 
 export default initializePassport;
